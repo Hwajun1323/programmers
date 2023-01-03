@@ -10,13 +10,12 @@ class Solution {
                 false -> indexMap[it] = 1 
         }
             
-        var size = stages.size // 스테이지 통과한 사람들 일단 1단계는 모두니까 !
-
+        var size = stages.size 
         for (i in 1..N){
             when(indexMap.containsKey(i)){
                 true -> {
                 failutrMap[i] = indexMap.getValue(i) / size.toDouble()
-                totalSize -= indexMap.getValue(i) // 스테이지 통과한 사람들
+                totalSize -= indexMap.getValue(i) 
                 }
                 false -> failutrMap[i] = 0.0
             }
